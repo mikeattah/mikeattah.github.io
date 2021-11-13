@@ -1,6 +1,7 @@
 import "./App.css";
 import { projectData } from "./projectData";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
+// "homepage": "https://github.com/mikeattah/mikeattah.github.io",
 
 function App() {
   let num = 0;
@@ -19,7 +20,7 @@ function App() {
       </div>
       <div className="projects-section">
         {projectData.map((project) => {
-          let { src, alt, title, description, repo, site } = project;
+          let { src, alt, title, tools, description, repo, site } = project;
           num++;
           return (
             <ProjectCard
@@ -27,6 +28,7 @@ function App() {
               alt={alt}
               num={`#${num}`}
               title={title}
+              tools={tools}
               description={description}
               repo={repo}
               site={site}

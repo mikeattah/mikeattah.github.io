@@ -7,10 +7,14 @@ function ProjectCard(props) {
         <img src={props.src} alt={props.alt} className="card-image" />
       </div>
       <div className="project-card-info">
-        <h3 className="title">
-          <span className="title-x">{props.num}</span> {props.title}
-        </h3>
-        <p className="description">{props.description}</p>
+        <div className="text-container">
+          <h3 className="title">
+            <span className="title-x">{props.num}</span> {props.title}
+          </h3>
+          <p className="description">
+            {props.description} <span className="title-x">{props.tools}</span>
+          </p>
+        </div>
         <div className="link-container">
           <a
             href={props.repo}
