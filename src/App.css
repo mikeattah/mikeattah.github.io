@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+.landing-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Mochiy Pop One", "Roboto", sans-serif;
+}
+
+.page-title-x {
+  color: #4907ff;
+}
+
+.page-description {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  font-style: italic;
+  width: 100%;
+  margin: 0;
+}
+
+.page-descripton-x {
+  color: #4907ff;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-description {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .page-title {
+    font-size: 1rem;
+  }
+
+  .page-description {
+    font-size: 0.6rem;
+    width: 100%;
+  }
+}
