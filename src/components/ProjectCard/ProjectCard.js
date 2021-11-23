@@ -11,9 +11,8 @@ function ProjectCard(props) {
           <h3 className="title">
             <span className="title-x">{props.num}</span> {props.title}
           </h3>
-          <p className="description">
-            {props.description} <span className="title-x">{props.tools}</span>
-          </p>
+          <p className="description-x">{props.description}</p>
+          <p className="description-y">Tools: {props.tools}</p>
         </div>
         <div className="link-container">
           <a
