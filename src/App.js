@@ -2,11 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import { portfolio } from "./portfolio";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
-import useSWR from "swr";
-// "homepage": "https://github.com/mikeattah/mikeattah.github.io",
 
 function App() {
   const [pageIndex, setPageIndex] = useState(0);
+  const url = "https://mikeattah.github.io/public/projects/portfolio.json";
 
   // pageElements: 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, ...
   const pageElements = 6;
@@ -18,12 +17,8 @@ function App() {
   }
   // console.log(pageArray.length); // <= 3
 
-  const fetcher = (url) => fetch(url).then((r) => r.parse());
-
-  const { data, error } = useSWR(
-    "https://mikeattah.com/portfolio.json",
-    fetcher
-  );
+  const fetcher = (url) => fetch(url, {}).then((r) => r.parse());
+  // console.log(fetcher(url));
 
   return (
     <div className="App">
